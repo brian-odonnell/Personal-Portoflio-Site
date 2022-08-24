@@ -1,0 +1,12 @@
+Watch CSS/JS
+--------------------
+1. Go to root
+2. Run "npm run dev-build" in terminal
+3. Make changes to CSS/JS in "/src/scss" and "/src/js"
+4. Code compiles to "/themes/2020_Website/assets/css" and "/themes/2020_Website/assets/js"
+
+
+Edit HTML/PHP
+--------------------
+1. Go to "/themes/2020_Website
+2. Edit .php files like a normal WP site

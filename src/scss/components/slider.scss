@@ -1,0 +1,15 @@
+.swiper {
+	margin: 0 0 2rem 0;
+
+	&-wrapper {
+		margin-bottom: 24px;
+
+		.img-container {
+			border: 1px solid $gray;
+		}
+	}
+
+	&-pagination {
+		bottom: 0 !important;
+	}
+}

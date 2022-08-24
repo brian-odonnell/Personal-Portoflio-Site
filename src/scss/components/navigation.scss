@@ -1,0 +1,39 @@
+#header {
+    padding: 1rem 0;
+
+    //fix mobile spacing
+    &.navbar-expand-md >.container,
+    &.navbar-expand-md >.container-fluid {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+#navbar {
+    flex-flow: row wrap;
+
+    .top-nav-wrapper {
+        width: 100%;
+        order: 1;
+        @include media-breakpoint-up(md) {
+            display: flex;
+            justify-content: flex-end;
+        }
+    }
+    .main-nav-wrapper {
+        width: 100%;
+        order: 2;
+        @include media-breakpoint-up(md) {
+            display: flex;
+            justify-content: flex-end;
+        }
+    }
+    .main-nav-wrapper, .top-nav-wrapper {
+        @include media-breakpoint-up(sm) {
+            //make bootstrap nav open on hover
+            .dropdown:hover .dropdown-menu{
+                display: block;
+                margin-top: 0;
+            }
+        }
+    }
+}

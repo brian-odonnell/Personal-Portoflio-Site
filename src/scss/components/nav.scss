@@ -1,0 +1,257 @@
+body.home header {
+	background-color: initial;
+}
+
+header {
+	z-index: 1000;
+	position: relative;
+	background-color: #252627;
+
+    .nav {
+        display: flex;
+        justify-content: space-between;
+        padding: 30px 0;
+
+        &__logo {
+            display: flex;
+            justify-content: flex-start;
+			align-items: center;
+
+			img {
+				transition: transform .2s ease;
+			}
+
+			&:hover {
+				img {
+					transform: scale(1.1);
+					transition: transform .2s ease;
+				}
+			}
+
+            a {
+                width: 65px;
+            }
+        }
+
+        &__list {
+			display: none;
+
+			@include media-breakpoint-up(md) {
+				color: white;
+				font-family: 'league spartan', Helvetica, Arial, sans-serif;
+				font-size: 16px;
+				display: flex;
+				justify-content: flex-end;
+				align-items: center;
+			}
+
+            ul {
+				list-style-type: none;
+				margin: 0;
+
+                li {
+                    display: inline-block;
+					margin: 0 15px;
+
+					a.nav-link {
+						padding: 0 5px;
+						transition: color .35s ease;
+						color: white;
+
+						&.active {
+							&:before {
+								width: 100%;
+								left: 0;
+							}
+
+							&:after {
+								width: 100%;
+								left: 0;
+							}
+						}
+					}
+
+					span.nav-link {
+						padding: 0 5px;
+						color: white;
+
+						&:hover {
+							cursor: pointer;
+						}
+					}
+                }
+            }
+		}
+
+		&__mobile-icon {
+			font-size: 30px;
+			color: white;
+			transition: transform .2s ease;
+
+			&:hover {
+				transform: scale(1.1);
+				transition: transform .2s ease;
+				cursor: pointer;
+			}
+
+			@include media-breakpoint-up(md) {
+				display: none;
+			}
+		}
+    }
+}
+
+.mobile-nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	// background-color: #1c1d25;
+	background-color: #252627;
+	transition: left .5s ease;
+	z-index: 1001;
+
+	@include media-breakpoint-up(md) {
+		display: none;
+	}
+
+	&.state-closed {
+		left: -100vw;
+		transition: left .5s ease;
+	}
+
+	&__button-container {
+		display: flex;
+		justify-content: flex-end;
+		margin-top: 30px;
+		height: 45px;
+		align-items: center;
+	}
+
+	&__button {
+		width: 30px;
+		height:	30px;
+		position: relative;
+	}
+
+	&__close {
+		border: 3px solid white;
+		border-radius: 30px;
+		width: 30px;
+		height: 30px;
+		position: absolute;
+		top: 15px;
+		right: 15px;
+		overflow: visible;
+		top: 0;
+		left: 0;
+
+		.line-1 {
+			height: 3px;
+			width: 15px;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%) rotate(45deg);
+			background-color: white;
+			transition: background-color .2s ease;
+		}
+
+		.line-2 {
+			height: 3px;
+			width: 15px;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%) rotate(-45deg);
+			background-color: white;
+			transition: background-color .3s ease;
+		}
+
+		.circle {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			width: 0px;
+			height: 0px;
+			background-color: white;
+			border-radius: 30px;
+			transition: all .5s ease;
+		}
+
+		&:hover {
+			cursor: pointer;
+
+			.line-1,
+			.line-2 {
+				background-color: #252627;
+				transition: background-color .2s ease;
+			}
+
+			.circle {
+				width: 30px;
+				height: 30px;
+				transition: all .3s ease;
+			}
+		}
+	}
+
+	&__container {
+		top: 50%;
+		transform: translateY(-50%);
+		position: absolute
+	}
+
+	&__list {
+		padding: 0 0 0 30px;
+		margin: 0;
+
+		li {
+			list-style-type: none;
+
+			a {
+				color: white;
+				font-size: 30px;
+				font-family: 'league spartan', Helvetica, Arial, sans-serif;
+				padding: 10px;
+
+				&:active,
+				&:hover,
+				&:visited {
+					color: white;
+				}
+			}
+
+			span {
+				color: #fff;
+				font-size: 30px;
+				font-family: league spartan,Helvetica,Arial,sans-serif;
+				padding: 10px;
+			}
+		}
+	}
+
+	&__social {
+		padding-top: 30px;
+		margin: 25px 0 0 30px;
+		display: flex;
+		border-top: 1px solid white;
+
+		.social {
+			margin: 0 10px;
+			font-size: 35px;
+
+			a {
+				color: white;
+
+				&:active,
+				&:hover,
+				&:visited {
+					color: white;
+				}
+			}
+		}
+	}
+}

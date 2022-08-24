@@ -1,0 +1,50 @@
+//--------------------------------------------------------------------
+// Colors
+//--------------------------------------------------------------------
+
+$black:      #000000;
+$off-black:  #1A1A1A;
+$dark-gray:  #222222;
+$gray:       #999999;
+$light-gray: #EEEEEE;
+$white:      #FFFFFF;
+
+//--------------------------------------------------------------------
+// Colors - Font Colors
+//--------------------------------------------------------------------
+
+.black {         color: $black       !important; }
+.dark-gray {     color: $dark-gray   !important; }
+.gray  {         color: $gray        !important; }
+.light-gray {    color: $light-gray  !important; }
+.white {         color: $white       !important; }
+
+
+//--------------------------------------------------------------------
+// Colors - Backgrounds
+//--------------------------------------------------------------------
+
+.background {
+    &--black{       background-color: $black    !important; }
+    &--dark-gray{   background-color: $dark-gray !important; }
+    &--gray{        background-color: $gray     !important; }
+    &--light-gray{  background-color: $light-gray !important; }
+    &--white{       background-color: $white    !important; }
+}
+
+//--------------------------------------------------------------------
+// Fonts
+//--------------------------------------------------------------------
+
+$icomoon : "icomoon";
+
+//--------------------------------------------------------------------
+// Spacing
+//--------------------------------------------------------------------
+
+$spacing-xs: .75rem;
+$spacing-sm: 1.5rem;
+$spacing-md: 2rem;
+$spacing-lg: 4rem;
+$spacing-hg: 6rem;
+$spacing-gi: 9rem;

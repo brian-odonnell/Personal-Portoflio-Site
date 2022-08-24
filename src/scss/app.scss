@@ -1,0 +1,26 @@
+// Core CSS
+@import "./lib/bootstrap/bootstrap";
+// @import "~bootstrap/scss/bootstrap";
+// @import "./core/fonts";
+@import "./core/global";
+@import "./core/variables";
+
+// View CSS
+@import "./views/home";
+@import "./views/about";
+@import "./views/photography";
+@import "./views/showcase";
+@import "./views/work";
+@import "./views/404.scss";
+
+// Component CSS
+@import "./components/contact-form";
+@import "./components/footer";
+@import "./components/nav";
+@import "./components/preloader";
+@import "./components/navigation";
+@import "./components/slider";
+@import "./components/modal.scss";
+
+// Library CSS
+@import "../../node_modules/swiper/swiper-bundle.min.css";

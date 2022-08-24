@@ -1,0 +1,123 @@
+.work {
+    &__container {
+        padding: 60px 0 0 0;
+    }
+
+    &__intro {
+        text-align: center;
+        border-bottom: 1px solid #cccccc;
+        margin: 0 0 60px 0;
+        @include make-col-ready();
+		@include make-col(12);
+    }
+
+    &__gallery {
+        display: flex;
+        flex-wrap: wrap;
+        @include make-col-ready();
+        @include make-col(12);
+    }
+
+    &__item {
+		margin: 0 0 60px 0;
+		width: 100%;
+		overflow: hidden;
+
+        @include media-breakpoint-up(md) {
+            width: 50%;
+
+            &:nth-child(odd) {
+                padding: 0 15px 0 0;
+            }
+
+            &:nth-child(even) {
+                padding: 0 0 0 15px;
+            }
+        }
+
+        @include media-breakpoint-up(lg) {
+            width: 33.33%;
+
+            &:nth-child(3n+1) {
+                padding: 0 15px 0 0;
+            }
+
+            &:nth-child(3n+2) {
+                padding: 0 7.5px;
+            }
+
+            &:nth-child(3n+3) {
+                padding: 0 0 0 15px;
+            }
+        }
+    }
+
+    &__image {
+		overflow: hidden;
+		border: 1px solid #ccc;
+		background-color: #ccc;
+		width: 100%;
+		padding-bottom: 62.25%;
+		position: relative;
+		justify-content: center;
+		display: flex;
+
+		@include media-breakpoint-up(md) {
+			width: auto;
+			padding-bottom: 0;
+			height: 207px;
+		}
+
+		@include media-breakpoint-up(lg) {
+			height: 185.09px;
+		}
+
+		@include media-breakpoint-up(xl) {
+			height: 222.59px;
+		}
+
+        img {
+			position: absolute;
+			height: 100%;
+
+			@include media-breakpoint-up(md) {
+				max-width: 100%;
+				transition: transform .2s ease;
+
+				position: absolute;
+				height: auto;
+				width: auto;
+				height: 100%;
+			}
+		}
+
+		&:hover {
+			@include media-breakpoint-up(md) {
+				img {
+					transform: scale(1.1);
+					transition: transform .2s ease;
+				}
+			}
+		}
+    }
+
+    &__description {
+
+	}
+
+	a {
+		h3,h6 {
+			color: #252627;
+
+			&:hover,
+			&:active,
+			&:visited {
+				color: #252627;
+			}
+		}
+
+		h3 {
+			margin: 15px 0 0 0;
+		}
+	}
+}

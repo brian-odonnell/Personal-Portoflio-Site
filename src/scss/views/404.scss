@@ -1,0 +1,30 @@
+.error {
+	position: relative;
+	margin: 120px 0 0 0;
+
+	&__image {
+		width: 100%;
+		border: 1px solid #252627;
+	}
+
+	&__content {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		text-align: center;
+		color: white;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		width: calc(100% - 2rem);
+
+		@include media-breakpoint-up(md) {
+			top: 35%;
+		}
+
+		h1, p {
+			width: 100%;
+		}
+	}
+}
