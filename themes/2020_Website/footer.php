@@ -24,8 +24,8 @@
 						<a href="https://www.linkedin.com/in/brianodo/" alt="LinkedIn" target="_blank" class="social">
 							<i class="fab fa-linkedin"></i>
 						</a>
-						<a href="https://codepen.io/brianodo" alt="CodePen" target="_blank" class="social">
-							<i class="fab fa-codepen"></i>
+						<a href="https://github.com/brian-odonnell" alt="Github" target="_blank" class="social">
+							<i class="fab fa-github"></i>
 						</a>
 						<div class="social open-form-js">
 							<i class="fas fa-envelope"></i>

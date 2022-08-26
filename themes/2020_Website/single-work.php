@@ -80,7 +80,7 @@
 									<li><span class="info__label">Link:</span> <a href="<?php the_field('link'); ?>" target="_blank"><?php the_field('link_text'); ?></a></li>
 								<?php } ?>
 							</ul>
-							<?php if (get_field('link')): ?>
+							<?php if (get_field('link') && get_field('include_disclaimer')): ?>
 								<p class="disclaimer">Disclaimer: State of live site has possibly changed since I last worked on it or when we handed it off to the client.</p>
 							<?php endif; ?>
 						</div>
